@@ -14,10 +14,18 @@ public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtils jwtUtils;
+    private final EmailService emailService;
 
     public String registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
+
+        emailService.sendSimpleEmail(
+                user.getEmail(),
+                "Успешная регистрация",
+                "Привет, " + user.getUsername() + "! Ты успешно зарегистрировался в Lab7."
+        );
+
         return "Пользователь " + user.getUsername() + " успешно зарегистрирован!";
     }
 
