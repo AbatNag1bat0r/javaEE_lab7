@@ -6,6 +6,7 @@ import com.example.lab7.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StopWatch;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +18,8 @@ public class AuthService {
     private final EmailService emailService;
 
     public String registerUser(User user) {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start("Registration Task");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
 
@@ -25,6 +28,8 @@ public class AuthService {
                 "Успешная регистрация",
                 "Привет, " + user.getUsername() + "! Ты успешно зарегистрировался в Lab7."
         );
+        stopWatch.stop();
+        System.out.println("Время выполнения регистрации: " + stopWatch.getTotalTimeMillis() + " мс");
 
         return "Пользователь " + user.getUsername() + " успешно зарегистрирован!";
     }
