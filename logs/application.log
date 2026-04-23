@@ -1,0 +1,25 @@
+2026-04-23 23:39:38.417 [main] INFO  com.example.lab7.Lab7Application - Starting Lab7Application using Java 21.0.10 with PID 17844 (C:\Users\User\IdeaProjects\Lab7\build\classes\java\main started by User in C:\Users\User\IdeaProjects\Lab7)
+2026-04-23 23:39:38.419 [main] DEBUG com.example.lab7.Lab7Application - Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-04-23 23:39:38.420 [main] INFO  com.example.lab7.Lab7Application - No active profile set, falling back to 1 default profile: "default"
+2026-04-23 23:39:39.562 [main] DEBUG com.example.lab7.config.JwtFilter - Filter 'jwtFilter' configured for use
+2026-04-23 23:39:40.129 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 610a84e5-9d83-4e85-967e-403857182e9a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23 23:39:40.628 [main] INFO  com.example.lab7.Lab7Application - Started Lab7Application in 2.749 seconds (process running for 3.423)
+2026-04-23 23:39:40.631 [main] INFO  com.example.lab7.Lab7Application - =======================================
+2026-04-23 23:39:40.631 [main] INFO  com.example.lab7.Lab7Application - Лабораторная работа №7 успешно запущена!
+2026-04-23 23:39:40.631 [main] INFO  com.example.lab7.Lab7Application - Проект готов к работе с MongoDB, JWT, UNIT-тест, Web-тест и Logging .
+2026-04-23 23:39:40.631 [main] INFO  com.example.lab7.Lab7Application - =======================================
+2026-04-23 23:43:54.331 [http-nio-8080-exec-3] INFO  c.e.lab7.controller.AuthController - Получен запрос на регистрацию: Pavel dormanov
+2026-04-23 23:43:54.332 [http-nio-8080-exec-3] INFO  c.example.lab7.service.AuthService - Начало регистрации пользователя: Pavel dormanov
+2026-04-23 23:43:54.534 [http-nio-8080-exec-3] INFO  c.example.lab7.service.AuthService - Пользователь Pavel dormanov успешно сохранен и письмо отправлено
+2026-04-23 23:45:01.339 [http-nio-8080-exec-6] INFO  c.e.lab7.controller.AuthController - Получен запрос на вход: Pavel dormanov
+2026-04-23 23:45:01.339 [http-nio-8080-exec-6] INFO  c.example.lab7.service.AuthService - Попытка входа пользователя: Pavel dormanov
+2026-04-23 23:45:01.443 [http-nio-8080-exec-6] INFO  c.example.lab7.service.AuthService - Пользователь Pavel dormanov успешно авторизован
+2026-04-23 23:45:16.894 [http-nio-8080-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-04-23 23:45:21.051 [http-nio-8080-exec-4] INFO  c.e.lab7.controller.AuthController - Получен запрос на вход: Pavel dormanov
+2026-04-23 23:45:21.051 [http-nio-8080-exec-4] INFO  c.example.lab7.service.AuthService - Попытка входа пользователя: Pavel dormanov
+2026-04-23 23:45:21.116 [http-nio-8080-exec-4] INFO  c.example.lab7.service.AuthService - Пользователь Pavel dormanov успешно авторизован
