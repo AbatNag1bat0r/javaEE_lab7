@@ -1,4 +1,5 @@
 package com.example.lab7.dto;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -6,4 +7,4 @@ import lombok.Data;
 @AllArgsConstructor
 public class AuthResponse {
     private String token;
-}
+}   
